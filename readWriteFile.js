@@ -26,3 +26,11 @@ fs.mkdir("stuff", () => {
     });
   });
 });
+
+setTimeout(() => {
+  fs.unlink("./stuff/writeMe.txt", () => {
+    fs.rmdir("stuff", () => {
+      console.log("your directory has been removed");
+    });
+  });
+}, 5000);
