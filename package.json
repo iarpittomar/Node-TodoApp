@@ -1,0 +1,23 @@
+{
+  "name": "node-todoapp",
+  "version": "1.0.0",
+  "description": "A todoApp in node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iarpittomar/Node-TodoApp.git"
+  },
+  "author": "Arpit Tomar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iarpittomar/Node-TodoApp/issues"
+  },
+  "homepage": "https://github.com/iarpittomar/Node-TodoApp#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}
