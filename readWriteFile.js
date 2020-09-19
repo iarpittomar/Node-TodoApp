@@ -15,3 +15,14 @@ fs.readFile("README.md", "utf-8", (err, data) => {
     console.log(err);
   }
 });
+
+//fs.unlink --> for delete the file
+
+//make a directory asyncs way
+fs.mkdir("stuff", () => {
+  fs.readFile("readme.txt", "utf-8", (err, data) => {
+    fs.writeFile("./stuff/writeMe.txt", data, () => {
+      console.log("Created the directory and written");
+    });
+  });
+});
