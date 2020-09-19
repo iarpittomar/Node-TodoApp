@@ -6,9 +6,11 @@ const myReadStream = fs.createReadStream(
   "utf-8"
 );
 
+const myWriteStream = fs.createWriteStream(__dirname + "/writeBuffer.txt");
+
 myReadStream.on("data", (chunk) => {
   console.log("new chunk received");
-  console.log(chunk);
+  myWriteStream.write(chunk);
 });
 
 // let server = http.createServer((req, res) => {
