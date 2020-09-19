@@ -8,10 +8,13 @@ const myReadStream = fs.createReadStream(
 
 const myWriteStream = fs.createWriteStream(__dirname + "/writeBuffer.txt");
 
-myReadStream.on("data", (chunk) => {
-  console.log("new chunk received");
-  myWriteStream.write(chunk);
-});
+// myReadStream.on("data", (chunk) => {
+//   console.log("new chunk received");
+//   myWriteStream.write(chunk);
+// });
+
+//use pipe on readable streams
+myReadStream.pipe(myWriteStream);
 
 // let server = http.createServer((req, res) => {
 //   console.log(req.url);
