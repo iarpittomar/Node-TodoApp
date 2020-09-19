@@ -17,11 +17,8 @@ const fs = require("fs");
 // myReadStream.pipe(myWriteStream);
 
 const server = http.createServer((req, res) => {
-  res.writeHead(200, { "Content-Type": "text/plain" });
-  const myReadStream = fs.createReadStream(
-    __dirname + "/readBuffer.txt",
-    "utf-8"
-  );
+  res.writeHead(200, { "Content-Type": "text/html" });
+  const myReadStream = fs.createReadStream(__dirname + "/index.html", "utf-8");
   myReadStream.pipe(res);
 });
 
