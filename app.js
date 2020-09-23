@@ -47,6 +47,7 @@ app.get("/profile/:name", (req, res) => {
   const data = {
     age: 29,
     job: "Nowfloats",
+    hobbies: ["eating", "fighting", "playing"],
   };
   res.render("profile", { person: req.params.name, data: data });
 });
