@@ -37,13 +37,18 @@
 var express = require("express");
 
 var app = express();
+app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
   res.send("This is the hompage");
 });
 
-app.get("/profile/:id", (req, res) => {
-  res.send(`Your request to see a profile with the id of ${req.params.id}`);
+app.get("/profile/:name", (req, res) => {
+  const data = {
+    age: 29,
+    job: "Nowfloats",
+  };
+  res.render("profile", { person: req.params.name, data: data });
 });
 
 app.listen(3000);
