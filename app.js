@@ -42,4 +42,8 @@ app.get("/", (req, res) => {
   res.send("This is the hompage");
 });
 
+app.get("/profile/:id", (req, res) => {
+  res.send(`Your request to see a profile with the id of ${req.params.id}`);
+});
+
 app.listen(3000);
